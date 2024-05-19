@@ -25,3 +25,9 @@ replay_pid*
 
 # Target directory
 target/
+
+# Vscode
+.vscode/
+
+# Helidon files
+.helidon
