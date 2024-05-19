@@ -28,7 +28,9 @@ RUN mvn package -Pjlink-image -DskipTests && echo "done!"
 # 2nd stage, build the final image with the JRI built in the 1st stage
 FROM debian:stable-slim
 
-LABEL maintainer="infoaguirrejesus@proton.me" version="1.1.0" description="Helidon 4.0.7 Chassis MP API"
+LABEL org.opencontainers.image.description="Helidon 4.0.8 Chassis MP API"
+LABEL org.opencontainers.image.authors="infoaguirrejesus@proton.me"
+LABEL org.opencontainers.image.version="1.21.0"
 
 # Set the timezone
 RUN apt-get update && apt-get install -y tzdata && \
