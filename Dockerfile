@@ -1,6 +1,6 @@
 
 # 1st stage, build the app
-FROM container-registry.oracle.com/java/openjdk:21 AS build
+FROM eclipse-temurin:21.0.3_9-jdk-alpine AS build
 
 WORKDIR /usr/share
 
