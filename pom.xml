@@ -11,7 +11,7 @@
     </parent>
     <groupId>open.upaio</groupId>
     <artifactId>quickstart-mp</artifactId>
-    <version>1.22.0</version>
+    <version>1.23.0</version>
 
     <dependencies>
         <dependency>
