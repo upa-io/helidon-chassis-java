@@ -1,11 +1,8 @@
 
 # 1st stage, build the app
-FROM eclipse-temurin:21.0.3_9-jdk-alpine AS build
+FROM eclipse-temurin:21 AS build
 
 WORKDIR /usr/share
-
-# Install necessary utilities and remove cache
-RUN apk update && apk add curl tar && rm -rf /var/cache/apk/*
 
 # Install maven
 RUN set -x && \
@@ -27,8 +24,6 @@ RUN mvn package -Dmaven.test.skip -Declipselink.weave.skip
 # Incremental docker builds will resume here when you change sources
 ADD src src
 RUN mvn package -Pjlink-image -DskipTests && echo "done!"
-
-# 2nd stage, build the final image with the JRI built in the 1st stage
 
 # 2nd stage, build the final image with the JRI built in the 1st stage
 FROM debian:stable-slim
