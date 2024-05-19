@@ -4,9 +4,8 @@ FROM eclipse-temurin:21.0.3_9-jdk-alpine AS build
 
 WORKDIR /usr/share
 
-# Install necessary utilities
-RUN apt-get update && apt-get install -y --no-cache --no-install-recommends curl tar && \
-    rm -rf /var/lib/apt/lists/*
+# Install necessary utilities and remove cache
+RUN apk update && apk add curl tar && rm -rf /var/cache/apk/*
 
 # Install maven
 RUN set -x && \
