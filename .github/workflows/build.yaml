@@ -20,10 +20,10 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.REGISTRY_TOKEN }}
 
-      - name: Build and push Spring Boot image
+      - name: Build and push image container to GitHub Container Registry
         uses: docker/build-push-action@v5.3.0
         with:
           push: true
-          tags: ghcr.io/${{ github.repository }}/app:latest
+          tags: ghcr.io/${{ github.repository }}:latest
           platforms: linux/amd64,linux/arm64
           
