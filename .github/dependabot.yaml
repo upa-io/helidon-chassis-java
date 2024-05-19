@@ -1,0 +1,13 @@
+# .github/dependabot.yaml
+version: 2
+updates:
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      day: "tuesday"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      day: "tuesday"
