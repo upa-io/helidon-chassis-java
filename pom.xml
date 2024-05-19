@@ -11,7 +11,7 @@
     </parent>
     <groupId>open.upaio</groupId>
     <artifactId>quickstart-mp</artifactId>
-    <version>1.2.0</version>
+    <version>1.21.0</version>
 
     <dependencies>
         <dependency>
@@ -25,6 +25,10 @@
         <dependency>
             <groupId>io.helidon.microprofile.health</groupId>
             <artifactId>helidon-microprofile-health</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.helidon.health</groupId>
+            <artifactId>helidon-health-checks</artifactId>
         </dependency>
         <dependency>
             <groupId>jakarta.json.bind</groupId>
