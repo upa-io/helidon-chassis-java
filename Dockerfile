@@ -4,6 +4,10 @@ FROM eclipse-temurin:21.0.3_9-jdk-alpine AS build
 
 WORKDIR /usr/share
 
+# Install necessary utilities
+RUN apt-get update && apt-get install -y --no-cache --no-install-recommends curl tar && \
+    rm -rf /var/lib/apt/lists/*
+
 # Install maven
 RUN set -x && \
     curl -O https://archive.apache.org/dist/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz && \
