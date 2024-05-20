@@ -11,7 +11,7 @@
     </parent>
     <groupId>open.upaio</groupId>
     <artifactId>quickstart-mp</artifactId>
-    <version>1.23.0</version>
+    <version>1.24.0</version>
 
     <dependencies>
         <dependency>
@@ -29,6 +29,10 @@
         <dependency>
             <groupId>io.helidon.health</groupId>
             <artifactId>helidon-health-checks</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.helidon.integrations.micrometer</groupId>
+            <artifactId>helidon-integrations-micrometer-cdi</artifactId>
         </dependency>
         <dependency>
             <groupId>jakarta.json.bind</groupId>
