@@ -1,13 +1,13 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/java
 {
-	"name": "Java 21",
+	"name": "Java 22",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/java:1-21",
+	"image": "mcr.microsoft.com/devcontainers/java:1-22",
 
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
-			"version": "21",
+			"version": "22",
 			"installMaven": "true",
 			"mavenVersion": "3.9.8",
 			"installGradle": "false"

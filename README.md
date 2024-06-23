@@ -5,7 +5,7 @@ Sample Helidon MP project that includes multiple REST operations.
 ## Build and run
 
 
-With JDK21
+With JDK22
 ```bash
 mvn package
 java -jar target/quickstart-mp.jar
