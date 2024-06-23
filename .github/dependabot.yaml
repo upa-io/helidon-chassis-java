@@ -5,9 +5,11 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      day: "tuesday"
+    assignees:
+      - "aguirre-jes"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "daily"
-      day: "tuesday"
+    assignees:
+      - "aguirre-jes"
