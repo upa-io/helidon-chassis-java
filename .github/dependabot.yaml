@@ -13,3 +13,9 @@ updates:
       interval: "daily"
     assignees:
       - "aguirre-jes"
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "aguirre-jes"
