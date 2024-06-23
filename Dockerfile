@@ -1,6 +1,6 @@
 
 # 1st stage, build the app
-FROM eclipse-temurin:21 AS build
+FROM eclipse-temurin:22 AS build
 
 WORKDIR /usr/share
 
