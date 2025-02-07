@@ -1,4 +1,4 @@
-name: Build and Push Docker Images
+name: Scan security vulnerabilities with Trivy
 
 on:
     push:
@@ -7,7 +7,7 @@ on:
     workflow_dispatch:
 
 jobs:
-  build-and-push:
+  scan-security:
     runs-on: ubuntu-latest
     steps:      
       - name: Run Trivy vulnerability scanner
