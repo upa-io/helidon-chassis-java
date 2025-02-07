@@ -27,7 +27,8 @@
 				"compulim.vscode-ipaddress",
 				"github.vscode-github-actions",
 				"redhat.vscode-yaml",
-				"redhat.vscode-xml"
+				"redhat.vscode-xml",
+				"github.copilot"
 			]
 		}
 	},
