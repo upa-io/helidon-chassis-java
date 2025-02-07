@@ -1,3 +1,5 @@
+[![Scan security vulnerabilities with Trivy](https://github.com/upa-io/helidon-chassis-java/actions/workflows/scan_security.yaml/badge.svg)](https://github.com/upa-io/helidon-chassis-java/actions/workflows/scan_security.yaml)
+
 # quickstart-mp
 
 Sample Helidon MP project that includes multiple REST operations.
