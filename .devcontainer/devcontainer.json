@@ -12,7 +12,10 @@
 			"installMaven": "true",
 			"mavenVersion": "3.9.9",
 			"installGradle": "false"
-		}
+		},
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {
+            "version": "latest"
+        }
 	},
 
 	// Configure tool-specific properties.
