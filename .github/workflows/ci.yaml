@@ -1,4 +1,4 @@
-name: Build and Push Docker Images
+name: CI with Maven ArtifactsS
 
 on:
   workflow_dispatch:
