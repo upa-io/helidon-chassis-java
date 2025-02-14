@@ -28,6 +28,7 @@ jobs:
           path: ~/.m2/repository/io/helidon
           retention-days: 1
   second-job:
+    needs: first-job
     runs-on: ubuntu-24.04
     steps:
       - name: Download Maven Artifacts
