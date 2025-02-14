@@ -1,4 +1,4 @@
-name: Build and Push Docker Images
+name: Build and Push Docker Image JLink
 
 on:
   workflow_dispatch:
@@ -26,7 +26,7 @@ jobs:
           push: true
           tags: ghcr.io/${{ github.repository }}:latest
           platforms: linux/amd64,linux/arm64
-          file: Dockerfile.jlink
+          file: Dockerfile.native
           cache-from: type=gha
           cache-to: type=gha,mode=max
           
