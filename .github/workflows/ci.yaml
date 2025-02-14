@@ -27,3 +27,21 @@ jobs:
           name: io-helidon-maven-artifacts
           path: ~/.m2/repository/io/helidon
           retention-days: 1
+  second-job:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Download Maven Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: io-helidon-maven-artifacts
+          path: ~/.m2/repository/io/helidon
+      - name: Check out code
+        uses: actions/checkout@v4.2.2
+      - name: Set up JDK ${{ env.JAVA_VERSION }}
+        uses: actions/setup-java@v4.7.0
+        with:
+          distribution: ${{ env.JAVA_DISTRO }}
+          java-version: ${{ env.JAVA_VERSION }}
+          cache: maven
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
