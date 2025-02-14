@@ -1,6 +1,6 @@
 
 # 1st stage, build the app
-FROM ghcr.io/graalvm/graalvm-community:23.0.2-ol9 AS build
+FROM ghcr.io/graalvm/graalvm-community:21.0.0-ol9 AS build
 
 WORKDIR /usr/share
 
@@ -25,20 +25,14 @@ RUN mvn package -Pnative-image -Dnative.image.skip -Dmaven.test.skip -Declipseli
 ADD src src
 RUN mvn package -Pnative-image -Dnative.image.buildStatic -DskipTests
 
-# Create the log directory and give write permissions
-RUN mkdir -p /helidon && chmod -R 777 /helidon
-
 RUN echo "done!"
 
 # 2nd stage, build the runtime image
 FROM scratch
-
-
 WORKDIR /helidon
 
 # Copy the binary built in the 1st stage
 COPY --from=build /helidon/target/quickstart-mp .
-COPY --from=build /helidon /helidon
 
 ENTRYPOINT ["./quickstart-mp"]
 
