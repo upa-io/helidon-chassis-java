@@ -22,7 +22,7 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       - name: Upload Maven Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: io-helidon-maven-artifacts
           path: ~/.m2/repository/io/helidon
