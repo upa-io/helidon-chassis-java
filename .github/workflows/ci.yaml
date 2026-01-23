@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Check out code
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@v6.0.2
       - name: Set up JDK ${{ env.JAVA_VERSION }}
         uses: actions/setup-java@v5.2.0
         with:
@@ -37,7 +37,7 @@ jobs:
           name: io-helidon-maven-artifacts
           path: ~/.m2/repository/io/helidon
       - name: Check out code
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@v6.0.2
       - name: Set up JDK ${{ env.JAVA_VERSION }}
         uses: actions/setup-java@v5.2.0
         with:
