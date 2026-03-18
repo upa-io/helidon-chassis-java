@@ -1,6 +1,6 @@
 
 # 1st stage, build the app
-FROM container-registry.oracle.com/java/openjdk:25 AS build
+FROM container-registry.oracle.com/java/openjdk:26 AS build
 
 WORKDIR /usr/share
 
